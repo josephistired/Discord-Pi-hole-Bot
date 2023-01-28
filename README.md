@@ -44,7 +44,7 @@ Crtl - S
 
 # 🎊 Starting The Bot
 
-If you have successfully completed all the previous steps, the bot should now be ready to run. If you are on Windows, you can run the bot by opening the bot.bat file. If you are using a Raspberry Pi or other Linux-based system, make sure you are in the bot's directory and run the command **"nohup node ."**  in the terminal. Once the bot is running, you can enjoy its features! If you encounter any issues, you can create a pull request for help.
+If you have successfully completed all the previous steps, the bot should now be ready to run. If you are on Windows, you can run the bot by opening the bot.bat file. Once the bot is running, you can enjoy its features! If you encounter any issues, you can create a pull request for help.
 
 
 # 💬 Commands
