@@ -25,7 +25,7 @@ Now that you have all the required Prerequisites. You can move on to the next st
 
 ```
 git clone https://github.com/josephistired/Discord-Pi-hole-Bot.git
-cd Discord-Pi-hole-Bot.git
+cd Discord-Pi-hole-Bot
 ```
 
 # ⚙️ Configuration
