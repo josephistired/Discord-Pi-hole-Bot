@@ -57,6 +57,12 @@ module.exports = {
         }
       );
 
+    if (body.status === "disabled") {
+      stats.setColor("Red");
+    } else {
+      stats.setColor("Green");
+    }
+
     interaction.reply({
       embeds: [stats],
       files: [attachment],

@@ -41,12 +41,17 @@ module.exports = {
     const attachment = new AttachmentBuilder("assets/pihole.png");
 
     const success = new EmbedBuilder()
-      .setTitle(
-        `Your Pi-hole DNS server has been disabled for ${seconds} seconds.`
-      )
       .setTimestamp()
       .setColor("Green")
       .setThumbnail("attachment://pihole.png");
+
+    if (!seconds) {
+      success.setTitle("Your Pi-hole DNS server has been disabled.");
+    } else {
+      success.setTitle(
+        `Your Pi-hole DNS server has been disabled for ${seconds} seconds.`
+      );
+    }
 
     await superagent
       .get(
