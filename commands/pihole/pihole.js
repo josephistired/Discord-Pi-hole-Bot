@@ -14,6 +14,13 @@ module.exports = {
     )
     .addSubcommand((options) =>
       options
+        .setName("chart")
+        .setDescription(
+          "View various stats DNS Queries on your Pi-hole with a Chart."
+        )
+    )
+    .addSubcommand((options) =>
+      options
         .setName("enable")
         .setDescription("Enable your Pi-hole DNS server with a simple command.")
     )
