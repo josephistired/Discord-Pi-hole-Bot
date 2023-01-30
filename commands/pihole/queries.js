@@ -1,14 +1,9 @@
-const { ChartJSNodeCanvas } = require("chartjs-node-canvas");
-const {
-  ChatInputCommandInteraction,
-  AttachmentBuilder,
-  EmbedBuilder,
-} = require("discord.js");
+const { ChatInputCommandInteraction, EmbedBuilder } = require("discord.js");
 const superagent = require("superagent");
 require("dotenv").config();
 
 module.exports = {
-  subCommand: "pihole.chart",
+  subCommand: "pihole.queries",
   /**
    * @param {ChatInputCommandInteraction} interaction
    */
@@ -18,7 +13,7 @@ module.exports = {
     );
 
     const chart = {
-      type: "pie",
+      type: "bar",
       data: {
         datasets: [
           {
@@ -37,29 +32,44 @@ module.exports = {
               body.reply_NXDOMAIN,
               body.reply_CNAME,
               body.reply_IP,
+              body.reply_DOMAIN,
+              body.reply_RRNAME,
+              body.reply_SERVFAIL,
+              body.reply_REFUSED,
+              body.reply_NOTIMP,
+              body.reply_OTHER,
               body.reply_DNSSEC,
+              body.reply_NONE,
+              body.reply_BLOB,
             ],
-            type: "pie",
-            label: "Dataset 1",
-            borderColor: "#ffffff",
-            backgroundColor: [
-              "#4E79A7",
-              "#F28E2B",
-              "#E15759",
-              "#76B7B2",
-              "#59A14F",
-              "#EDC948",
-              "#B07AA1",
-            ],
+            type: "bar",
+            label: "Type of Queries",
+            borderColor: "#f20900",
+            backgroundColor: "#4E79A733",
             borderWidth: 3,
             hidden: false,
           },
         ],
-        labels: ["UNKNOWN", "NODATA", "NXDOMAIN", "CNAME", "IP", "DNSSEC"],
+        labels: [
+          "UNKNOWN",
+          "NODATA",
+          "NXDOMAIN",
+          "CNAME",
+          "IP",
+          "DOMAIN",
+          "RRNAME",
+          "SERVFAIL",
+          "REFUSED",
+          "NOTIMP",
+          "OTHER",
+          "DNSSEC",
+          "NONE",
+          "BLOB",
+        ],
       },
       options: {
         title: {
-          display: true,
+          display: false,
           position: "top",
           fontSize: 12,
           fontFamily: "sans-serif",
@@ -67,7 +77,7 @@ module.exports = {
           fontStyle: "bold",
           padding: 10,
           lineHeight: 1.2,
-          text: "Type of Queries",
+          text: "Chart title",
         },
         layout: {
           padding: {
@@ -77,18 +87,22 @@ module.exports = {
             bottom: 0,
           },
         },
-        legend: {
-          display: true,
-          position: "top",
-          align: "center",
-          fullWidth: true,
-          reverse: false,
-          labels: {
-            fontSize: 12,
-            fontFamily: "sans-serif",
-            fontColor: "#666666",
-            fontStyle: "normal",
-            padding: 10,
+        plugins: {
+          datalabels: {
+            display: true,
+            align: "center",
+            anchor: "center",
+            backgroundColor: "#eee",
+            borderColor: "#ddd",
+            borderRadius: 6,
+            borderWidth: 1,
+            padding: 4,
+            color: "#000000",
+            font: {
+              family: "sans-serif",
+              size: 8,
+              style: "normal",
+            },
           },
         },
       },

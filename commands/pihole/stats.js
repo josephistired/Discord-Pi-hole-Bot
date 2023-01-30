@@ -7,7 +7,7 @@ const superagent = require("superagent");
 require("dotenv").config();
 
 module.exports = {
-  subCommand: "pihole.view",
+  subCommand: "pihole.stats",
   /**
    * @param {ChatInputCommandInteraction} interaction
    */
@@ -42,8 +42,16 @@ module.exports = {
           value: `\`\`\`${body.queries_cached}\`\`\``,
         },
         {
+          name: "⚙️ Number of DNS queries forwarded",
+          value: `\`\`\`${body.queries_forwarded}\`\`\``,
+        },
+        {
           name: "🖥️ Number of current clients",
           value: `\`\`\`${body.unique_clients}\`\`\``,
+        },
+        {
+          name: "🖥️ Number of clients ever seen",
+          value: `\`\`\`${body.clients_ever_seen}\`\`\``,
         },
         {
           name: "🔒 Privacy level",

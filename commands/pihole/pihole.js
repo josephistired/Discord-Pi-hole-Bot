@@ -9,15 +9,18 @@ module.exports = {
     )
     .addSubcommand((options) =>
       options
-        .setName("view")
+        .setName("stats")
         .setDescription("View various stats on your Pi-hole.")
     )
     .addSubcommand((options) =>
       options
-        .setName("chart")
-        .setDescription(
-          "View various stats DNS Queries on your Pi-hole with a Chart."
-        )
+        .setName("queries")
+        .setDescription("View a chart of different queries types stats.")
+    )
+    .addSubcommand((options) =>
+      options
+        .setName("clients")
+        .setDescription("View a chart of different client stats.")
     )
     .addSubcommand((options) =>
       options
