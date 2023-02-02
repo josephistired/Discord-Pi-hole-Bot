@@ -1,6 +1,6 @@
 {
-  "name": "pihole-discord.js-bot",
-  "version": "0.0.1",
+  "name": "discord-pi-hole-bot",
+  "version": "1.0.0",
   "description": "A basic bot that displays information from your pi-hole dashboard.",
   "main": "./src/index.js",
   "scripts": {
@@ -15,6 +15,8 @@
   "license": "MIT",
   "dependencies": {
     "ascii-table": "^0.0.9",
+    "chart.js": "^3.9.1",
+    "chartjs-node-canvas": "^4.1.6",
     "discord.js": "^14.7.1",
     "dotenv": "^16.0.3",
     "glob": "^8.1.0",
