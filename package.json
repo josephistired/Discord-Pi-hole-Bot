@@ -19,7 +19,7 @@
     "chartjs-node-canvas": "^4.1.6",
     "discord.js": "^14.9.0",
     "dotenv": "^16.0.3",
-    "glob": "^10.2.2",
+    "glob": "^10.3.1",
     "superagent": "^8.0.9",
     "timestamp-conv": "^3.0.0"
   }
