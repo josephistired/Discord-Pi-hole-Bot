@@ -1,5 +1,11 @@
+<h1>Important Notice!</h1>
+<p>While this bot has not been updated due to limitations in the pi-hole API. The Pi-hole team has announced the release of Pi-hole v6 is coming sooner or later with a brand new, "A new REST API and web server directly embedded into the pinhole-FTL binary". Check it out [here](https://discourse.pi-hole.net/t/pi-hole-v6-beta-testing/65413).</p>
+
+<p>When v6 is released, I will see and try & implement the new features into the bot.</p>
+
+
 # 🍾 Discord.js-Pi-hole-Bot
-This is a bot that utilizes the Pi-hole API to retrieve statistics and perform actions on your Pi-hole DNS server. With this bot, you can easily check the performance of your Pi-hole server and disable or enable it with simple commands, giving you full control over your network's DNS blocking capabilities.
+This is a bot that utilizes the Pi-hole API to retrieve statistics and perform actions on your Pi-hole DNS server. With this bot, you can easily check the performance of your Pi-hole server and disable or enable it with simple commands, giving you full control over your network's DNS-blocking capabilities.
 
 # 📊 Features
 - Simple commands
