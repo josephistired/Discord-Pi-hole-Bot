@@ -19,7 +19,7 @@ module.exports = {
       .setColor("Red");
 
     let { body } = await superagent.get(
-      `${process.env.IP}/admin/api.php?summary&auth=${process.env.AUTH}`
+      `${process.env.IP}/admin/api.php?summary&auth=${process.env.AUTH}`,
     );
 
     if (body.status === "enabled")

@@ -13,7 +13,7 @@ module.exports = {
    */
   async execute(interaction) {
     let { body } = await superagent.get(
-      `${process.env.IP}/admin/api.php?summary&version&type&auth=${process.env.AUTH}`
+      `${process.env.IP}/admin/api.php?summary&version&type&auth=${process.env.AUTH}`,
     );
 
     const attachment = new AttachmentBuilder("assets/pihole.png");
@@ -60,9 +60,9 @@ module.exports = {
         {
           name: "📃 Gravity last updated",
           value: `\`\`\`${new Date(
-            body.gravity_last_updated.absolute * 1000
+            body.gravity_last_updated.absolute * 1000,
           ).toLocaleString()}\`\`\``,
-        }
+        },
       );
 
     if (body.status === "disabled") {

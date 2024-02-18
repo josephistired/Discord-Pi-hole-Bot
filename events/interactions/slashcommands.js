@@ -31,7 +31,7 @@ module.exports = {
 
     if (command.testing == true)
       errorsArray.push(
-        "Command Is In Testing Phase! Vist The Github For More Infortmation!"
+        "Command Is In Testing Phase! Vist The Github For More Infortmation!",
       );
 
     if (errorsArray.length)
@@ -45,7 +45,7 @@ module.exports = {
             {
               name: "Reasons:",
               value: `\`\`\`${errorsArray.join("\n")}\`\`\``,
-            }
+            },
           ),
         ],
         ephemeral: true,
@@ -54,7 +54,7 @@ module.exports = {
     const subCommand = interaction.options.getSubcommand(false);
     if (subCommand) {
       const subCommandFile = client.subCommands.get(
-        `${interaction.commandName}.${subCommand}`
+        `${interaction.commandName}.${subCommand}`,
       );
       if (!subCommandFile)
         return interaction.reply({

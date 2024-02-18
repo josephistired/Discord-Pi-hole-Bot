@@ -9,7 +9,7 @@ module.exports = {
    */
   async execute(interaction) {
     let { body } = await superagent.get(
-      `${process.env.IP}/admin/api.php?summaryRaw&auth=${process.env.AUTH}`
+      `${process.env.IP}/admin/api.php?summaryRaw&auth=${process.env.AUTH}`,
     );
 
     const chart = {

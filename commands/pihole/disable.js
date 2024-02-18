@@ -21,7 +21,7 @@ module.exports = {
       .setColor("Red");
 
     let { body } = await superagent.get(
-      `${process.env.IP}/admin/api.php?summary&auth=${process.env.AUTH}`
+      `${process.env.IP}/admin/api.php?summary&auth=${process.env.AUTH}`,
     );
 
     if (body.status === "disabled")
@@ -49,13 +49,13 @@ module.exports = {
       success.setTitle("Your Pi-hole DNS server has been disabled.");
     } else {
       success.setTitle(
-        `Your Pi-hole DNS server has been disabled for ${seconds} seconds.`
+        `Your Pi-hole DNS server has been disabled for ${seconds} seconds.`,
       );
     }
 
     await superagent
       .get(
-        `${process.env.IP}/admin/api.php?disable=${seconds}&auth=${process.env.AUTH}`
+        `${process.env.IP}/admin/api.php?disable=${seconds}&auth=${process.env.AUTH}`,
       )
       .then(interaction.reply({ embeds: [success], files: [attachment] }));
   },
