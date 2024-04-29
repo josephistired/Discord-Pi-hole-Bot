@@ -20,7 +20,7 @@
     "discord.js": "^14.14.1",
     "dotenv": "^16.4.1",
     "glob": "^10.3.3",
-    "superagent": "^8.1.2",
+    "superagent": "^9.0.2",
     "timestamp-conv": "^3.0.0"
   }
 }
