@@ -17,7 +17,7 @@
     "ascii-table": "^0.0.9",
     "chart.js": "^3.9.1",
     "chartjs-node-canvas": "^4.1.6",
-    "discord.js": "^14.14.1",
+    "discord.js": "^14.15.2",
     "dotenv": "^16.4.1",
     "glob": "^10.3.3",
     "superagent": "^8.1.2",
