@@ -1,6 +1,11 @@
 # ⚠️ Important Notice!
 
-This project is no longer actively maintained. I no longer use Pi-hole (I've switched to NextDNS), so development has stopped for the time being. That said, you're welcome to fork the project and make your own improvements — contributions are always welcome!
+This project is no longer actively maintained. I no longer use Pi-hole (I've switched to NextDNS), so development has stopped.
+
+> ⚠️ **This bot will not work with Pi-hole v6 or newer.**  
+> The Pi-hole API was completely rewritten in v6, and this bot relies on the older API used in Pi-hole v5 and below.
+
+You're welcome to fork the project and update it to support the new API if you'd like — contributions are always welcome!
 
 ---
 
