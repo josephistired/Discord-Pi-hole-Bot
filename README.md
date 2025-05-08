@@ -1,22 +1,15 @@
-<h1>Important Notice!</h1>
-<p>While this bot has not been updated due to limitations in the pi-hole API. The Pi-hole team has announced the release of Pi-hole v6 is coming sooner or later with a brand new, "A new REST API and web server directly embedded into the pinhole-FTL binary". Check it out [here](https://discourse.pi-hole.net/t/pi-hole-v6-beta-testing/65413).</p>
+# ⚠️ Important Notice!
 
-<p>When v6 is released, I will see and try & implement the new features into the bot.</p>
+This project is no longer actively maintained. I no longer use Pi-hole (I've switched to NextDNS), so development has stopped for the time being. That said, you're welcome to fork the project and make your own improvements — contributions are always welcome!
 
+---
 
 # 🍾 Discord.js-Pi-hole-Bot
-This is a bot that utilizes the Pi-hole API to retrieve statistics and perform actions on your Pi-hole DNS server. With this bot, you can easily check the performance of your Pi-hole server and disable or enable it with simple commands, giving you full control over your network's DNS-blocking capabilities.
 
-# 📊 Features
-- Simple commands
-- Easy to setup
-- And much more coming [soon](https://github.com/users/josephistired/projects/10)
+A simple Discord bot that uses the Pi-hole API to fetch stats and control your Pi-hole DNS server. You can check server performance or toggle blocking with easy commands — all from Discord.
 
-# 📚 Wiki
-
-To learn how to use this bot, go to the [wiki](https://www.josephcarmosino.website/discordpiholebot#wiki). Also to view the commands for this bot.
-
+---
 
 # 🤚🏻 Disclaimer
 
-**Please note that this bot is not endorsed, sponsored by, or associated with Pi-hole. It is an independent project that uses the Pi-hole API, but is not endorsed or supported by the Pi-hole team. This bot is not affiliated with the Pi-hole developers or their respective trademarks. Use this bot at your own risk and always make sure to read the documentation and understand how it works before using it.**
+This project is **not affiliated with or endorsed by the Pi-hole team**. It’s an independent tool that interacts with the Pi-hole API. Use it at your own risk, and make sure you understand how it works before deploying it in your environment.
